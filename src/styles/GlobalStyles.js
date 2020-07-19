@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
+ :root{
+    --accent-color: #ff944d;
+    --accent-color-active: #ff751a;
+    --text-color: #ffffff;
+    --background-color: #333333;
+    --list-container-background: #222222;
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +21,7 @@ export default createGlobalStyle`
   }
 
   body, textarea, input, button {
-    color: white;
+    color: var(--text-color);
     line-height: 1.5;
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +30,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #333333;
+    background: var(--background-color);
   }
 
   html, body, #root {
