@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.8062c2d6.chunk.js",
-    "main.js.map": "/static/js/main.8062c2d6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d041ea3f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d041ea3f.js.map",
-    "static/css/2.8e9f1564.chunk.css": "/static/css/2.8e9f1564.chunk.css",
-    "static/js/2.baa107e1.chunk.js": "/static/js/2.baa107e1.chunk.js",
-    "static/js/2.baa107e1.chunk.js.map": "/static/js/2.baa107e1.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.3d4c76a10f01451f3e57f289c5bb3145.js": "/precache-manifest.3d4c76a10f01451f3e57f289c5bb3145.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.8e9f1564.chunk.css.map": "/static/css/2.8e9f1564.chunk.css.map",
-    "static/js/2.baa107e1.chunk.js.LICENSE.txt": "/static/js/2.baa107e1.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/poppins-latin-900italic.f3c803b2.woff2"
+    "main.js": "/redux-saga-todo-list/static/js/main.8062c2d6.chunk.js",
+    "main.js.map": "/redux-saga-todo-list/static/js/main.8062c2d6.chunk.js.map",
+    "runtime-main.js": "/redux-saga-todo-list/static/js/runtime-main.eccd3e36.js",
+    "runtime-main.js.map": "/redux-saga-todo-list/static/js/runtime-main.eccd3e36.js.map",
+    "static/css/2.2ffa8ed1.chunk.css": "/redux-saga-todo-list/static/css/2.2ffa8ed1.chunk.css",
+    "static/js/2.35c42f12.chunk.js": "/redux-saga-todo-list/static/js/2.35c42f12.chunk.js",
+    "static/js/2.35c42f12.chunk.js.map": "/redux-saga-todo-list/static/js/2.35c42f12.chunk.js.map",
+    "index.html": "/redux-saga-todo-list/index.html",
+    "precache-manifest.e2c55c943132e8d44a75d3cb44bec29a.js": "/redux-saga-todo-list/precache-manifest.e2c55c943132e8d44a75d3cb44bec29a.js",
+    "service-worker.js": "/redux-saga-todo-list/service-worker.js",
+    "static/css/2.2ffa8ed1.chunk.css.map": "/redux-saga-todo-list/static/css/2.2ffa8ed1.chunk.css.map",
+    "static/js/2.35c42f12.chunk.js.LICENSE.txt": "/redux-saga-todo-list/static/js/2.35c42f12.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/redux-saga-todo-list/static/media/poppins-latin-900italic.f3c803b2.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.d041ea3f.js",
-    "static/css/2.8e9f1564.chunk.css",
-    "static/js/2.baa107e1.chunk.js",
+    "static/js/runtime-main.eccd3e36.js",
+    "static/css/2.2ffa8ed1.chunk.css",
+    "static/js/2.35c42f12.chunk.js",
     "static/js/main.8062c2d6.chunk.js"
   ]
 }
