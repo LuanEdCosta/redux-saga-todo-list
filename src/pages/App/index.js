@@ -8,10 +8,10 @@ import {
   Title,
   EmptyListMessage,
   AddButton,
+  TaskItem,
 } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { addTask } from 'store/actions/Task'
-import TodoItem from 'components/TodoItem'
 
 const App = () => {
   const [username, setUsername] = useState('')
@@ -22,6 +22,8 @@ const App = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
+
+    if (!username.trim() || !task.trim()) return
 
     const newTask = {
       id: new Date().getTime(),
@@ -61,8 +63,8 @@ const App = () => {
 
           {
             taskList.map((taskItem) => {
-              const { id, task } = taskItem
-              return <TodoItem key={id} task={task} />
+              const { id, username, task } = taskItem
+              return <TaskItem key={id} username={username} task={task} />
             })
           }
         </TodoListContainer>

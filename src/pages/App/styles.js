@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import TodoItem from 'components/TodoItem'
 
 export const Container = styled.div`
   display: flex;
@@ -14,6 +15,8 @@ export const TodoContainer = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 450px;
+  min-width: 340px;
 `
 
 export const Title = styled.h1`
@@ -27,6 +30,7 @@ export const InputContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 `
 
 export const Input = styled.input`
@@ -74,4 +78,8 @@ export const TodoListContainer = styled.div`
 export const EmptyListMessage = styled.div`
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
+`
+
+export const TaskItem = styled(TodoItem)`
+  margin-bottom: 8px;
 `

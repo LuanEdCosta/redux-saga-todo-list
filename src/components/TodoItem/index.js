@@ -1,10 +1,24 @@
 import React from 'react'
-import { Container } from './styles'
+import {
+  Container,
+  Image,
+  UserName,
+  Task,
+  RemoveButton,
+  Content,
+} from './styles'
 
-const App = () => {
+const App = (props) => {
+  const { className, imageSrc, username, task, onRemoveClick } = props
+
   return (
-    <Container>
-      <div>Todo Item</div>
+    <Container className={className}>
+      <RemoveButton click={onRemoveClick}>x</RemoveButton>
+      <Image src={imageSrc} alt={username} />
+      <Content>
+        <UserName>{username}</UserName>
+        <Task>{task}</Task>
+      </Content>
     </Container>
   )
 }
