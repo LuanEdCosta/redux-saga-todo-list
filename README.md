@@ -1,4 +1,4 @@
-<h1 style="display: flex; justify-content: center; align-items: center">
+<h1 style="text-align: center">
   <img src="https://raw.githubusercontent.com/redux-saga/redux-saga/master/logo/0800/Redux-Saga-Logo.png" width="75px">
   <span style="margin-left: 16px">Redux Saga Todo List</span>
 </h1>
@@ -22,7 +22,7 @@
 </p>
 
 <div style="text-align: center">
-    <img style="border-radius: 10px" alt="Repository issues" src="images/screenshot.png">
+    <img alt="App Screenshot" src="images/screenshot.png">
 </div>
 
 ---
