@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import TodoItem from 'components/TodoItem'
+import ErrorBox from 'components/ErrorBox'
 
 export const Container = styled.div`
   display: flex;
@@ -83,4 +84,8 @@ export const EmptyListMessage = styled.div`
 
 export const TaskItem = styled(TodoItem)`
   margin-bottom: 8px;
+`
+
+export const Error = styled(ErrorBox)`
+  margin-bottom: 1.6rem;
 `

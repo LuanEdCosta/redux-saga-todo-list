@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeTaskById, requestFetchUser } from 'store/ducks/task'
 import {
   Container,
   InputContainer,
@@ -9,22 +11,28 @@ import {
   EmptyListMessage,
   AddButton,
   TaskItem,
+  Error,
 } from './styles'
-import { useDispatch, useSelector } from 'react-redux'
-import { removeTaskById, requestFetchUser } from 'store/ducks/task'
 
 const App = () => {
-  const [username, setUsername] = useState('')
+  const userNameRef = useRef(null)
+  const [username, setUserName] = useState('')
   const [task, setTask] = useState('')
 
   const dispatch = useDispatch()
-  const { taskList } = useSelector(({ Task }) => Task)
+  const { taskList, showError } = useSelector(({ Task }) => Task)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!username.trim() || !task.trim()) return
+
     const fetchUserAction = requestFetchUser(username, task)
     dispatch(fetchUserAction)
+
+    setUserName('')
+    setTask('')
+
+    userNameRef.current.focus()
   }
 
   const handleRemoveTask = (id) => {
@@ -39,8 +47,9 @@ const App = () => {
 
         <InputContainer>
           <Input
+            ref={userNameRef}
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUserName(e.target.value)}
             placeholder="Github Username"
           />
 
@@ -53,6 +62,8 @@ const App = () => {
 
         <AddButton type="submit">Add Task +</AddButton>
 
+        {!!showError && <Error text="Uer not found!" />}
+
         <TodoListContainer>
           {!taskList.length && (
             <EmptyListMessage>No Task to Show</EmptyListMessage>
@@ -60,7 +71,7 @@ const App = () => {
 
           {
             taskList.map((taskItem) => {
-              const { id, username, task, name, avatar } = taskItem
+              const { id, userName, task, name, avatar } = taskItem
               const onRemove = () => handleRemoveTask(id)
 
               return (
@@ -69,7 +80,7 @@ const App = () => {
                   task={task}
                   imageSrc={avatar}
                   onRemoveClick={onRemove}
-                  username={name || username}
+                  userName={name || userName}
                 />
               )
             })

@@ -9,14 +9,16 @@ import {
 } from './styles'
 
 const App = (props) => {
-  const { className, imageSrc, username, task, onRemoveClick } = props
+  const { className, imageSrc, userName, task, onRemoveClick } = props
 
   return (
     <Container className={className}>
       <RemoveButton onClick={onRemoveClick}>x</RemoveButton>
-      <Image src={imageSrc} alt={username} />
+
+      <Image src={imageSrc} alt={userName} />
+
       <Content>
-        <UserName>{username}</UserName>
+        <UserName>{userName}</UserName>
         <Task>{task}</Task>
       </Content>
     </Container>

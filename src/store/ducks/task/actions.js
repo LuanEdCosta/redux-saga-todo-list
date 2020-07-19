@@ -15,7 +15,7 @@ export const addTask = (userData, task) => {
       id,
       task,
       name,
-      username: login,
+      userName: login,
       avatar: avatar_url,
     },
   }
@@ -26,10 +26,10 @@ export const removeTaskById = (taskId) => ({
   payload: taskId
 })
 
-export const requestFetchUser = (username, task) => ({
+export const requestFetchUser = (userName, task) => ({
   type: USER_FETCH_REQUESTED,
   payload: {
-    username,
+    userName,
     task,
   }
 })

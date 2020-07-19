@@ -7,6 +7,7 @@ export default createGlobalStyle`
     --text-color: #ffffff;
     --background-color: #333333;
     --list-container-background: #232323;
+    --error-color: #ff4d4d;
   }
 
   * {

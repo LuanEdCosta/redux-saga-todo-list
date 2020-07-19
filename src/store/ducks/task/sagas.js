@@ -5,8 +5,8 @@ import { Server } from 'services'
 
 export function* fetchUser(action) {
   try {
-    const { username, task } = action.payload
-    const { data } = yield call(Server.get, `users/${username}`)
+    const { userName, task } = action.payload
+    const { data } = yield call(Server.get, `users/${userName}`)
     const addTaskAction = addTask(data, task)
     yield put(addTaskAction)
   } catch (e) {

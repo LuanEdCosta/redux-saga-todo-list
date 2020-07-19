@@ -1,7 +1,8 @@
-import { ADD_TASK, REMOVE_TASK_BY_ID } from './types'
+import { ADD_TASK, REMOVE_TASK_BY_ID, USER_FETCH_FAILED } from './types'
 
 const initialState = {
-  taskList: []
+  taskList: [],
+  showError: false,
 }
 
 export default (state = initialState, action) => {
@@ -9,7 +10,7 @@ export default (state = initialState, action) => {
 
   switch (type) {
     case ADD_TASK: {
-      const newState = { ...state }
+      const newState = { ...state, showError: false }
       newState.taskList.push(payload)
       return newState
     }
@@ -19,6 +20,8 @@ export default (state = initialState, action) => {
       newState.taskList = newState.taskList.filter(({ id }) => id !== payload)
       return newState
     }
+
+    case USER_FETCH_FAILED: return { ...state, showError: true }
 
     default: return state
   }
