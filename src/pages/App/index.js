@@ -11,7 +11,7 @@ import {
   TaskItem,
 } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
-import { addTask, removeTaskById } from 'store/actions/Task'
+import { removeTaskById, requestFetchUser } from 'store/ducks/task'
 
 const App = () => {
   const [username, setUsername] = useState('')
@@ -22,17 +22,9 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
     if (!username.trim() || !task.trim()) return
-
-    const newTask = {
-      id: new Date().getTime(),
-      username,
-      task,
-    }
-
-    const addTaskAction = addTask(newTask)
-    dispatch(addTaskAction)
+    const fetchUserAction = requestFetchUser(username, task)
+    dispatch(fetchUserAction)
   }
 
   const handleRemoveTask = (id) => {
@@ -68,15 +60,16 @@ const App = () => {
 
           {
             taskList.map((taskItem) => {
-              const { id, username, task } = taskItem
+              const { id, username, task, name, avatar } = taskItem
               const onRemove = () => handleRemoveTask(id)
 
               return (
                 <TaskItem
                   key={id}
                   task={task}
-                  username={username}
+                  imageSrc={avatar}
                   onRemoveClick={onRemove}
+                  username={name || username}
                 />
               )
             })

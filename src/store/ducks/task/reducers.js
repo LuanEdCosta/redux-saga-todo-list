@@ -1,4 +1,4 @@
-import { ADD_TASK, REMOVE_TASK_BY_ID } from '../ActionTypes'
+import { ADD_TASK, REMOVE_TASK_BY_ID } from './types'
 
 const initialState = {
   taskList: []

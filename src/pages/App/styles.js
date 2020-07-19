@@ -15,8 +15,9 @@ export const TodoContainer = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 450px;
-  min-width: 340px;
+  width: 40%;
+  max-width: 600px;
+  min-width: 360px;
 `
 
 export const Title = styled.h1`

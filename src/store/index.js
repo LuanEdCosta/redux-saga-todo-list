@@ -1,8 +1,15 @@
-import { createStore, combineReducers } from 'redux'
-import Task from './reducers/Task'
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import rootSaga from './rootSaga'
+import rootReducer from './rootReducer'
 
-const Reducers = combineReducers({
-  Task,
-})
+const sagaMiddleware = createSagaMiddleware()
 
-export default createStore(Reducers)
+const Store = createStore(
+  rootReducer,
+  applyMiddleware(sagaMiddleware)
+)
+
+sagaMiddleware.run(rootSaga)
+
+export default Store
