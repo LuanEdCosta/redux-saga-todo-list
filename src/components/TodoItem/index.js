@@ -13,7 +13,7 @@ const App = (props) => {
 
   return (
     <Container className={className}>
-      <RemoveButton click={onRemoveClick}>x</RemoveButton>
+      <RemoveButton onClick={onRemoveClick}>x</RemoveButton>
       <Image src={imageSrc} alt={username} />
       <Content>
         <UserName>{username}</UserName>

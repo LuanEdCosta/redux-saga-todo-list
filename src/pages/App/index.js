@@ -11,7 +11,7 @@ import {
   TaskItem,
 } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
-import { addTask } from 'store/actions/Task'
+import { addTask, removeTaskById } from 'store/actions/Task'
 
 const App = () => {
   const [username, setUsername] = useState('')
@@ -20,7 +20,7 @@ const App = () => {
   const dispatch = useDispatch()
   const { taskList } = useSelector(({ Task }) => Task)
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     if (!username.trim() || !task.trim()) return
@@ -35,9 +35,14 @@ const App = () => {
     dispatch(addTaskAction)
   }
 
+  const handleRemoveTask = (id) => {
+    const removeTaskAction = removeTaskById(id)
+    dispatch(removeTaskAction)
+  }
+
   return (
     <Container>
-      <TodoContainer onSubmit={onSubmit}>
+      <TodoContainer onSubmit={handleSubmit}>
         <Title>Redux Saga Todo List</Title>
 
         <InputContainer>
@@ -64,7 +69,16 @@ const App = () => {
           {
             taskList.map((taskItem) => {
               const { id, username, task } = taskItem
-              return <TaskItem key={id} username={username} task={task} />
+              const onRemove = () => handleRemoveTask(id)
+
+              return (
+                <TaskItem
+                  key={id}
+                  task={task}
+                  username={username}
+                  onRemoveClick={onRemove}
+                />
+              )
             })
           }
         </TodoListContainer>
