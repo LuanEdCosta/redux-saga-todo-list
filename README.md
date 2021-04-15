@@ -67,7 +67,7 @@ This project is under the MIT license. See the [LICENSE](https://github.com/Luan
 
 ---
 
-Made with ♥ by Luan Eduardo da Costa | <luan1346@gmail.com>
+Made with ♥ by Luan Eduardo da Costa | [Follow me on Linkedin](https://www.linkedin.com/in/luaneducosta/)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
