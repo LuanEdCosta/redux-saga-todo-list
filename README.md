@@ -31,14 +31,14 @@
 
 This project was created to study more about Redux and learn Redux Saga to improve the state management of an application.
 
-Click [here](https://luanedcosta.github.io/redux-saga-todo-list/) to see it running in your browser.
+👉 Click [here](https://luanedcosta.github.io/redux-saga-todo-list/) to see it running in your browser.
 
 ## :rocket: Technologies
 
-- [ReactJS](https://reactjs.org/)
+- [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [Redux-Saga](https://redux-saga.js.org/)
-- [styled-components](https://www.styled-components.com/)
+- [Styled Components](https://www.styled-components.com/)
 - [Axios](https://github.com/axios/axios)
 
 ## :information_source: How To Use
