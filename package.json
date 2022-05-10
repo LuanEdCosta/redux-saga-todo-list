@@ -2,7 +2,7 @@
   "name": "redux-saga-todo-list",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Luan Eduardo da Costa <luan1346@gmail.com>",
+  "author": "Luan Eduardo da Costa",
   "homepage": "https://luanedcosta.github.io/redux-saga-todo-list/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
