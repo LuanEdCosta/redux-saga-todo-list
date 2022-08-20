@@ -63,7 +63,7 @@ $ yarn start
 
 ## :man: Author
 
-Made with ♥ by Luan Eduardo da Costa | [Follow me on Linkedin](https://www.linkedin.com/in/luaneducosta/)
+Luan Eduardo da Costa | [Follow me on Linkedin](https://www.linkedin.com/in/luaneducosta/)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
